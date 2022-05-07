@@ -2,560 +2,314 @@
 <html lang="es">
     <head>
         <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
-        <script type="text/javascript" src="scripts/jquery-3.6.0.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous" />
+        <title>Crímenes de odio en New York</title>
+        <link rel="preconnect" href="fonts" />
+        <link href="fonts" rel="stylesheet" />
         <style>
-            main{
-                background-color: black
-            }
-            @font-face{
-                font-family: "avenir";
-                src: (fonts/AvenirLTStd-Black.otf);
-            }
-
-            @font-face{
-                font-family: "avenir";
-                src: (fonts/AvenirLTStd-Roman.otf);
-            }
-            @font-face{
-                font-family: "lulo";
-                src: (fonts/Lulo Clean One Bold.otf);
-            }
-            
             :root {
-                --bs-body-font-family: 'Avenir';
-                /* el que es color de fondo */
-                --bs-body-bg: rgba(0, 0, 0, 1) !important;
-                /* el que es color de texto */
-                --bs-body-color: #eee !important;
-                /* el que es color de destaque */
-                --bs-primary: #f70;
+                --bs-font-sans-serif: "Avenir";
             }
-
-            h1,
-            h2,
-            h3,
-            h4,
-            h5,
-            h6 {
-                font-family: 'Lulo', bold;
-                font-weight: 700;
+            :hover {
+                transition: all ease 0.5s;
             }
-
-            h1{
-                font-size: calc(2rem + 5vw);
-                text-shadow: 0 0 4px black;
-                line-height: 1;
-            }
-
-            h2, h6{
-                text-shadow: 0 0 4px black;
-            }
-
-            b,
-            strong,
-            em {
+            * {
                 font-weight: 500;
-                font-style: normal;
             }
-            
-            section#satelital {
-                margin-top: -50vh;
+            header p {
+                text-align: justify;
             }
-
-            section#satelital div {
-                z-index: -99999;
+            header p.lead {
+                line-height: 1.6;
             }
-
-            header {
-                height: 45vh;
-                background: linear-gradient(rgba(0, 0, 0,  1),rgba(0, 0, 0,  1), rgba(0, 0, 0,  0.7),rgba(0, 0, 0, 0));
-                color: white;
+            .card,
+            .card-img-top {
+                border: none;
+                border-radius: 0 0;
             }
-            @media (max-width: 575.98px) {
-                header {
-                    height: 70vh;
-                    background: linear-gradient(rgba(0, 0, 0,  1),rgba(0, 0, 0,  1),rgba(0, 0, 0, 0.0));
-                    color: white;
-                }
+            footer a {
+                color: var(--bs-gray);
+                text-decoration: none;
             }
-
-            .linea{
-                cursor: pointer;
+            footer a:hover {
+                color: var(--bs-light);
             }
-
-            #txt-urb{
-                font-size: calc(2rem + 5vw);
-                text-shadow: 0 0 4px black;
-                line-height: 1;
-                color: #eee;
-                font-family: 'Lulo';                
-            }
-            .txtsvg{
-                font-size: calc(1rem);
-                color: #eee;  
-                font-family: 'Avenir', sans-serif;        
-            }
-
-
-            #basic-addon1 {
-                font-family: 'Lulo' ;
-                background-color: #eee;
-                border-radius: 0%;
-                color: #c83a02;
-                border-color: brown;
-                border-width: 0px;
-                font-size: 1.2em;
-            }
-
-            #selector{
-                cursor: pointer;
-                font-family: roboto, sans-serif;
-                background-color: #eee;
-                border-radius: 0%;
-                border-width: 0px;
-                color: BLACK;
-                border-color: brown;
-               
-            }
-
-            #selector:hover{
-
-                background-color: rgb(216, 216, 216);
-
-
-            }
-
-
-
         </style>
-        <title>Falla de San Ramón</title>
     </head>
+    <body>
+        <header class="container">
+            <div class="row py-5">
+                <div class="col-sm-11 col-md-10 col-lg-9 col-xl-8 col-xxl-7 mx-auto">
+                    <h1 class="mb-3 mt-5 text-center">Datos preocupantes: Crímenes de odio en New York</h1>
 
-    <body class="bg-black">
-        <header>
-            <div class="container-fluid g-0" id="titular">
-                <div class="row g-0">
-                    <div class="col-sm-6 me-auto">
-                        <div class="p-5" style="z-index: 1;">
-                            <h1>FALLA DE SAN RAMÓN</h1>
-                            <h2 class="fs-6">VULNERABILIDADES Y DESASTRES SOCIONATURALES EN CHILE</h2>
-                        </div>
-                    </div>
+                    <h2 class="fs-6 mb-5 text-center text-uppercase">Helena Martínez</h2>
+
+                    <p class="lead">
+                        Se define como crimen o delito de odio a aquel lamentable suceso en el que una persona es atacada por otra, motivada exclusivamente por su pertenencia a un determinado grupo social. Es decir, según su edad, sexo, género, religión, raza, etnia, nacionalidad, discapacidad, orientación sexual o ideologías políticas.
+                    </p>
+                    <p>Si bien se puede concluir que los delitos de odio varían dependiendo del contexto y de los prejuicios que tenga una sociedad específica, de igual manera están presentes en todas las sociedades, las cuales ya han ido creando medios para intentar solucionar esta situación.</p>
+                  <p> A continuación, un gráfico que representa datos en torno a los crímenes de odio ocurridos en la ciudad de New York. </p>
                 </div>
             </div>
         </header>
 
-        <section class="container-fluid g-0" id="satelital">
-            <div class="row g-0">
-                <div class="col" style="z-index: -1;">
-                    <!--Muestra la imagen más ancha o la cuadrada según pantalla-->
-                    <object data="img/mapa_falla_sm.svg" type="image/svg+xml" class="d-md-none bg-light"></object>
-                    <object data="img/mapa_falla_lg.svg" type="image/svg+xml" class="d-none d-md-block bg-light"></object>
-                    <!--Se muestra o no por una clase de Bootstrap que responde al ancho de pantalla-->
-                </div>
-            </div>
-        </section>
-
-        <main>
-            <section class="container py-4">
-                <div class="row">
-                    <div class="col-sm-11 col-md-10 col-lg-9 col-xl-8 col-xxl-7 mx-auto">
-                        <p class="lead mt-4">
-                            La Falla de Ramón es una falla geológica activa, que se encuentra situada al oriente de Santiago, la capital de Chile, siguiendo el pie del cerro de la sierra de Ramón a la que debe su nombre.
-                        </p>
-
-                        <p>
-                           
-                        </p>
-
-                        <h3 class="text-center mt-5">Tipo de Movimiento: Falla inversa</h3>
-                        <div class="text-center my-4">
-                            <img src="img/fallas/falla_inversa_sanramon.gif" class="w-75 mx-auto bg-light" />
-                            <!--el PNG se coloca como tal, no como objecto svg                            
-                            <object data="img/FALLA_GIF_AHORA_SI.gif" type="image/svg+xml" class="w-75 mx-auto bg-light"></object>
-                            -->
-                        </div>
-                        <p>
-                            En el campo de la geología, se denomina falla a una fractura, generalmente plana, en el terreno a lo largo de la cual se han deslizado los dos bloques el uno respecto al otro. Las fallas inversas son fallas con
-                            desplazamiento vertical en donde el bloque de techo se mueve hacia arriba con respecto al bloque de muro. Dado que el bloque de techo se mueve hacia arriba y sobre el bloque de muro, las fallas inversas reflejan
-                            un acortamiento de la corteza.
-                        </p>
-                        <h4 class="text-center my-5">Otros tipos de fallas</h4>
-                        <div class="row">
-                            <div class="col-sm-4 text-center" >
-                                <h5>Falla Normal</h5>
-                                <img src="img/fallas/falla_normal.gif" class="w-100 bg-light" />
-                                <!--el PNG se coloca como tal, no como objecto svg
-                                <object data="img/falla_normal_si.png" type="image/svg+xml" class="w-100 bg-light"></object>
-                                -->
-                            </div>
-                            <div class="col-sm-4 text-center">
-                                <h5>Falla Vertical</h5>
-                                <img src="img/fallas/falla_vertical.gif" class="w-100 bg-light" />
-                                <!--el PNG se coloca como tal, no como objecto svg
-                                <object data="img/falla_vertical_si.png" type="image/svg+xml" class="w-100 bg-light"></object>
-                                -->
-                            </div>
-                            <div class="col-sm-4 text-center">
-                                <h5>Falla de Desgarre</h5>
-                                <img src="img/fallas/falla_desgarre.gif" class="w-100 bg-light" />
-                                <!--el PNG se coloca como tal, no como objecto svg                                
-                                <object data="img/falla_de_desgarre_si.png" type="image/svg+xml" class="w-100 bg-light"></object>
-                                -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="container-fluid g-0">
-                <div class="container py-4">
-                    <div class="row">
-                        <div class="col-sm-11 col-md-10 col-lg-9 col-xl-8 col-xxl-7 mx-auto">
-                            <h3 class="text-center">Posibles efectos</h3>
-                            <p>
-                                La Falla San Ramón representa dos fuentes de amenaza directa para la Región Metropolitana, llegando a afectar más de tres millones de personas. Si bien el último episodio sísmico a causa de esta falla ocurrió
-                                hace 8.000 años atrás, esta sigue activa y un posible sismo podría generar graves efectos.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                 <div class="container-fluid w-100 g-0">
-                    <div class="row g-0">
-                        <div class="col">
-                            <!--Muestra la imagen más ancha o la cuadrada según pantalla-->
-                            <object data="img/frac_cel.svg" type="image/svg+xml" class="d-md-none bg-light"></object>
-                            <object data="img/frac.svg" type="image/svg+xml" class="d-none d-md-block bg-light"></object>
-                            <!--Se muestra o no por una clase de Bootstrap que responde al ancho de pantalla-->
-                        </div>
-                    </div>
-                </div>
-                  <div class="container py-4">
-                    <div class="row">
-                        <div class="col-md-11 col-lg-10 col-xl-9 col-xxl-8 mx-auto text-center">
-                                <p>Promedio de la intensidad sísmica según su profundidad hipocentral</p>
-                                <object data="img/graf.svg" type="image/svg+xml" class="w-100 mx-auto bg-light"></object>
-                                <p class="small">(Escala de evaluación sísmica a base de los efectos y daños producidos por un sismo)</p>
-                            </div>
-                        <div class="col-sm-11 col-md-10 col-lg-9 col-xl-8 col-xxl-7 my-3 mx-auto">
-                            <p>
-                                En el caso de un episodio sísmico de 7,5 Ritcher y gracias a la distancia de 5 km del hipocentro, el daño producido alcanzaría los 9 grados en la escala de intensidad macrosísmica, la cual mide el daño
-                                producido por un sismo. Esto significaría que el sismo sería de categoría ‘’Destructor’’, provocando pánico general, dificultad para pararse de pie, y alta probabilidad de daño e incluso derrumbe de
-                                edificaciones.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="container py-4">
-                <div class="row">
-                    <div class="col-sm-11 col-md-10 col-lg-9 col-xl-8 col-xxl-7 mx-auto">
-                        <h3 class="text-center">Urbanización del Gran Santiago sobre la Falla de Ramón</h3>
-                        <p>
-                            La falla ha experimentado en sus últimas décadas un aumento considerable de áreas urbanizadas en el piedemonte de su borde oriente, donde se localiza la Falla San Ramón (FSR), de modo que se ha vuelto un nuevo
-                            escenario de riesgo geológico. Usando incuestionables atractivos sobre el medio natural, la vista panorámica a la ciudad y un ambiente saludable, se han promocionado proyectos de vivienda de alto costo que
-                            conviven con este riesgo sísmico, pero que parecen desestimar desde los instrumentos de planificación de nivel comunal y metropolitano, tales como el  Plan Regulador Metropolitano de Santiago (PRMS). </p>
-                    </div>
-
-
-                    <div class="col-sm-11 col-md-10 col-lg-0 col-xl-8 col-xxl-7 mx-auto text-center">
-                        <div class="input-group my-3 mx-auto w-50">
-                            <span class="input-group-text" id="basic-addon1">AÑO</span>
-                            <select class="form-select" id="selector">
-                                <option value="1960" select>1960</option>
-                                <option value="1985">1985</option>
-                                <option value="1994">1994</option>
-                                <option value="2003">2003</option>
-                                <option value="2017">2017</option>
-                            </select>
-                        </div>
-                    </div>
-
-
-
-                    <div class="d-none d-md-block" >
-                        <svg height="70" width="100%">
-                            <circle cx="20%" cy="30" r="10" stroke="#bf8266" stroke-width="2" fill="black" />
-                            <text class="txtsvg" x = "23%" y = "35" fill="#eee">Límite de urbanización según PRMS </text>
-                            <circle cx="55%" cy="30" r="10" stroke="#bf8266" stroke-width="2" fill="#bf8266" style="opacity:0.69"/>
-                            <text class="txtsvg" x = "58%" y = "35" fill="#eee">Área urbanizada</text>
-                        </svg>
-                    </div>
-                    <div class="d-md-none" >
-                        <svg height="100" width="100%">
-                            <circle cx="20%" cy="30" r="10" stroke="#bf8266" stroke-width="2" fill="black" />
-                            <text class="txtsvg" x = "30%" y = "35" fill="#eee">Límite de urbanización de PRMS</text>
-                            <circle cx="20%" cy="60" r="10" stroke="#bf8266" stroke-width="2" fill="#bf8266" style="opacity:0.69"/>
-                            <text class="txtsvg" x = "30%" y = "65" fill="#eee">Área urbanizada</text>
-                        </svg>
-                    </div>
-                    <div class="col-md-11 col-lg-10 col-xl-9 col-xxl-8 mx-auto pt-3 pb-4 text-center" id="urbe" style="min-height: 400px;"></div>
-                    <script>
-                        const urbe = document.getElementById("urbe");
-                        const selector = document.getElementById("selector");
-                        selector.onchange = function () {
-                            urbe.innerHTML = '<object data="img/urb/urb' + selector.value + '.svg" type="image/svg+xml" class="w-100"></object>';
-                        };
-                        selector.onchange();
-                    </script>
-                </div>
-            </section>
-
-
-
-            <section class="container-fluid g-0">
-                <div class="container pt-4 pb-5">
-                    <div class="row">
-                        <div class="col-sm-11 col-md-10 col-lg-9 col-xl-8 col-xxl-7 mx-auto">
-                            <h3 class="text-center">Zonas de riesgo</h3>
-                            <p>
-                                Los estudios realizados con simulaciones para un sismo de magnitud 7.5 en escala Richter han identificado áreas las cuales tendrían distintos niveles de intensidad de movimiento y que irían entre alta-alta, media alta y
-                                media. Estas categorías están dadas por las aceleraciones del suelo que produciría dicho sismo y han sido establecidas de acuerdo a ciertas distancias según la simulación.
-                            </p>
-                       <div class="row align-items-center">
-                                <div class="col-10 col-md-9 mx-auto">
-                                    <object data="img/zonas2.svg" type="image/svg+xml" class="w-100"></object>
-                                </div>
-                                <div class="col-6 col-md-3 mx-auto small">
-                                    <dl>
-                                        <dt style="color: #f4ddb5;">⬤ Zona de riesgo medio</dt>
-                                        <dd>
-                                            Superficie: 50.073 ha.<br />
-                                            Habitantes: 1.513.663<br />
-                                            Viviendas: 541.952
-                                        </dd>
-                                    </dl>
-                                    <dl>
-                                        <dt style="color: #e2b971;">⬤ Zona de riesgo medio-alto</dt>
-                                        <dd>
-                                            Superficie: 33.000 ha.<br />
-                                            Habitantes: 863.696<br />
-                                            Viviendas: 293.625
-                                        </dd>
-                                    </dl>
-                                    <dl>
-                                        <dt style="color: #e29471;">⬤ Zona de riesgo alto</dt>
-                                        <dd>
-                                            Superficie: 38.500 ha.<br />
-                                            Habitantes: 515.552<br />
-                                            Viviendas: 161.782
-                                        </dd>
-                                    </dl>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="container pt-4 pb-5">
-                    <div class="row">
-                        <div class="col-sm-11 col-md-10 col-lg-9 col-xl-8 col-xxl-7 mx-auto">
-                            <p>
-                                El sector se transforma en un elemento de riesgo real y por esto es necesario tener conciencia de la falla y tomar medidas, como por ejemplo, reconocer la existencia de la falla en los planos normativos y
-                                generar zonas de resguardo y restricciones. Además, se debe restringir la construcción sobre la traza de la falla que aún no se ha edificado para así disminuir las zonas urbanas de riesgo y proteger a los
-                                habitantes de Santiago de un posible desastre.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            
-        </main>
-        
-        <aside class="bg-dark text-white-75 opacity-75">
-
-
-        <div class="container-fluid w-100 g-0">
-            <div class="row g-0">
-                <div class="col">
-                    <!--Muestra la imagen más ancha o la cuadrada según pantalla-->
-                    <img src="img/foto_falla_celular.jpg" class="d-md-none bg-light w-100" style="position:absolute; z-index: 1;"/>
-                    <img src="img/foto_falla_fondo.png" class="d-none d-md-block bg-light w-100" style="position:absolute; z-index: 1;"/>
-                    <!--Se muestra o no por una clase de Bootstrap que responde al ancho de pantalla-->
-                </div>
-            </div>
-        </div>
-            <div class="container">
-                
-                <div class="row py-5">
-                    <div class="col-sm-11 col-md-10 col-lg-9 col-xl-8 col-xxl-7 mx-auto small" style="z-index: 2;">
-                        <p class="text-center">
-                            <strong>
-                                Equipo de trabajo
-                            </strong></br>
-                            Magdalena Achondo,   Natalia Correal,   Helena Martínez,   Teresa Muñoz
-
-                        </p>
-                        
-                        <p class="text-center">
-                          <strong> Fuentes </strong> <br />
-                                        <a style="color: white;" href="http://revistas.ubiobio.cl/index.php/RU/article/view/4529" target=“_blank”>
-                                          ¿Diseño urbano resiliente en el piedemonte de Santiago? Contraste de escenarios comunales con riesgo sísmico frente a la Falla San Ramón
-                                        </a>
-                                        , <br />
-                                        <a
-                                          style="color: white;"
-                                          href="https://revistaurbanismo.uchile.cl/index.php/RU/article/view/48216/62321" target=“_blank”
-                                        >
-                                          ¿Urbanización fallada? La Falla San Ramón como nuevo escenario de riesgo sísmico y la sostenibilidad de Santiago
-                                        </a>
-                                        , <br />
-                                        <a style="color: white;" href="https://www.camara.cl/verDoc.aspx?prmTipo=DocumentoFicha&prmID=238716&prmTipoDoc=LOCAL" target=“_blank”>
-                                        Cámara de Diputados: Informe sobre permisos de construcción
-                                        </a>
-                                        , <br />
-                                        <a
-                                          style="color: white;"
-                                          href="https://web.archive.org/web/20100823034210/http://revistaurbanismo.uchile.cl/n6/ferrandototal.html" target=“_blank”
-                                        >
-                                          Defendamos nuestra ciudad
-                                        </a>
-                                        , <br />
-                                        <a
-                                          style="color: white;"
-                                          href="https://web.archive.org/web/20100911130148/http://www.anip.cl/prensa/estudio-revela-que-falla-geologica-en-santiago-esta-activa-y-cruza-siete-comunas/" target=“_blank”
-                                        >
-                                        Estudio revela que falla geológica en Santiago está activa y cruza siete comunas
-                                        </a>
-                                        , <br />
-                                        <a style="color: white;" href="https://www.uchile.cl/noticias/170291/estudio-analiza-el-impacto-de-la-falla-san-ramon-en-la-rm-" target=“_blank”>
-                                        Estudio U. de Chile plantea que cinco comunas corren peligro por construcciones sobre Falla San Ramón
-                                        </a>
-                                        , <br />
-                                        <a
-                                          style="color: white;"
-                                          href="https://www.bcn.cl/siit/actualidad-territorial/falla-san-ramon-riesgo-potencial-en-la-ciudad-de-santiago/document_view2" target=“_blank”
-                                        >
-                                          Falla San Ramón, riesgo potencial en la ciudad de Santiago
-                                        </a>
-                                        , <br />
-                                        <a
-                                          style="color: white;"
-                                          href="http://www.geofisica.cl/Tempo/mix/San_Ramon.htm" target=“_blank”
-                                        >
-                                        Falla San Ramón
-                                        </a>
-                                        <a style="color: white;" href="https://www.latercera.com/que-pasa/noticia/falla-san-ramon-vuelve-a-activarse-lapidario-informe-del-congreso-alerta-que-podria-generar-terremoto-de-75/TFMZIMJNOJGHLDAD2TKISTBBVM/" target=“_blank”>
-                                          Falla San Ramón vuelve a “activarse”: lapidario informe del Congreso alerta que podría generar terremoto de 7,5°
-                                        </a>
-                                        , <br />
-                                        <a
-                                          style="color: white;"
-                                          href="https://www.latercera.com/que-pasa/noticia/farellones-registra-14-temblores-en-los-ultimos-tres-dias-es-una-nueva-senal-de-reactivacion-de-la-falla-de-san-ramon/NMG6TXFW6BHS3CBXATZYNBAU7Q/" target=“_blank”
-                                        >
-                                          Farellones registra 14 temblores en los últimos tres días, ¿es una nueva señal de reactivación de la Falla de San Ramón?
-                                        </a>
-                                        , <br />
-                                        <a
-                                          style="color: white;"
-                                          href="https://www.duna.cl/noticias/2020/11/02/la-falla-de-san-ramon-y-los-peligros-para-el-sector-oriente-de-santiago/" target=“_blank”
-                                        >
-                                          La falla de San Ramón y los peligros para el sector oriente de Santiago
-                                        </a>
-                                        , <br />
-                                        <a
-                                          style="color: white;"
-                                          href="https://geologia-ambiental.cl/geohuellas/numero-4/santiago-territorio-y-amenaza-de-la-falla-san-ramon/" target=“_blank”
-                                        >
-                                          Territorio y amenaza de la Falla San Ramón
-                                        </a>
-                                        , <br />
-                                        <a
-                                          style="color: white;"
-                                          href="https://www.biobiochile.cl/noticias/nacional/chile/2020/11/08/viviendo-en-la-falla-de-san-ramon-todo-en-orden.shtml " target=“_blank”
-                                        >
-                                          Viviendo en la Falla de San Ramón: polémico condominio se estaría construyendo justo sobre ella
-                                        </a>
-                                      </p>
-                    </div>
-                </div>
-            </div>
-        </aside>
-
- <!--COPIANDO DESDE ACÁ-->
- <footer  style="position:relative;z-index: 2; background-color: rgba(0, 0, 0, 0.6)">
-    <div class="container">
-        <div class="row py-5">
-            <div class="col-lg-12">
-                <h4 class="text-white text-center w-75 mx-auto mb-5">Más sobre vulnerabilidades y desastres socionaturales en Chile</h4>
-            </div>
-            <!--DESDE AQUÍ LA TORMENTA IGNEA-->
-            <div class="col-lg-4 mb-4">
-                <div class="row g-0 bg-black text-white align-items-center shadow">
-                    <div class="col-4">
-                        <img loading="lazy" src="img/grupo-incendio.jpg" class="w-100" />
-                    </div>
-                    <div class="col-8">
-                        <p class="px-3 small m-0 py-0">
-                            <a href="https://infodigitalgrupo.github.io/infografia-final/" class="link-light fw-bold" target="_blank">Tormenta Ignea</a><br/>
-                            <small>2017</small>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <!--HASTA AQUÍ LA TORMENTA IGNEA-->
- 
-            <!--DESDE AQUÍ EL CHAITÉN-->
-            <div class="col-lg-4 mb-4">
-                <div class="row g-0 bg-black text-white align-items-center shadow">
-                    <div class="col-4">
-                        <img loading="lazy" src="img/grupo-volcan.jpg" class="w-100" />
-                    </div>
-                    <div class="col-8">
-                        <p class="px-3 small m-0 py-0">
-                            <a href="https://volcan-chaiten.github.io/Infografia-Final/" class="link-light fw-bold" target="_blank">Chaitén, erupción inesperada</a><br/>
-                            <small>2008</small>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <!--HASTA AQUÍ EL CHAITÉN-->
-            <!--DESDE AQUÍ EL RIÑIHUAZO-->
-            <div class="col-lg-4 mb-4">
-                <div class="row g-0 bg-black text-white align-items-center shadow">
-                    <div class="col-4">
-                        <img loading="lazy" src="img/grupo-rinihuazo.jpg" class="w-100" />
-                    </div>
-                    <div class="col-8">
-                        <p class="px-3 small m-0 py-0">
-                            <a href="https://infografia-digital.github.io/rinihuazo-final/" class="link-light fw-bold" target="_blank">El Riñihuazo</a><br/>
-                            <small>1960</small>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <!--HASTA AQUÍ EL RIÑIHUAZO-->
-        </div>
-    </div>
-    <div class="container-fluid bg-black small text-white-50">
-        <div class="container">
-            <div class="row">
+        <main class="container-fluid bg-light">
+            <div class="row py-5">
                 <div class="col-sm-11 col-md-10 col-lg-9 col-xl-8 col-xxl-7 mx-auto">
-                    <p class="pt-3 text-center d-flex justify-content-between align-items-center">
-                        <span>INFOGRAFÍA DIGITAL</span> <a href="https://diseno.uc.cl/" target="_blank" class="link-light">DISEÑO UC</a> <span>DICIEMBRE 2021</span>
+                    <!--parte acá…-->
+                    <?xml version="1.0" encoding="utf-8"?>
+                    <!-- Generator: Adobe Illustrator 25.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                    <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                    	 viewBox="0 0 895 806" style="enable-background:new 0 0 895 806;" xml:space="preserve">
+                    <style type="text/css">
+                    	.st0{fill:none;stroke:#E85E49;stroke-width:40.9677;stroke-opacity:0.5;}
+                    	.st1{fill:none;stroke:#E85E49;stroke-width:177.5269;stroke-opacity:0.5;}
+                    	.st2{fill:none;stroke:#9E0142;stroke-width:61.4516;stroke-opacity:0.5;}
+                    	.st3{fill:none;stroke:#E85E49;stroke-width:129.7312;stroke-opacity:0.5;}
+                    	.st4{fill:none;stroke:#9E0142;stroke-width:13.6559;stroke-opacity:0.5;}
+                    	.st5{fill:none;stroke:#E85E49;stroke-width:109.2473;stroke-opacity:0.5;}
+                    	.st6{fill:none;stroke:#BEE5A0;stroke-width:13.6559;stroke-opacity:0.5;}
+                    	.st7{fill:none;stroke:#FFF57D;stroke-width:75.1075;stroke-opacity:0.5;}
+                    	.st8{fill:none;stroke:#56ADAE;stroke-width:13.6559;stroke-opacity:0.5;}
+                    	.st9{fill:none;stroke:#5E4FA2;stroke-width:34.1398;stroke-opacity:0.5;}
+                    	.st10{fill:none;stroke:#5E4FA2;stroke-width:20.4839;stroke-opacity:0.5;}
+                    	.st11{fill:none;stroke:#FDBE70;stroke-width:13.6559;stroke-opacity:0.5;}
+                    	.st12{fill:none;stroke:#FFF57D;stroke-width:27.3118;stroke-opacity:0.5;}
+                    	.st13{fill:none;stroke:#5E4FA2;stroke-width:6.828;stroke-opacity:0.5;}
+                    	.st14{fill:none;stroke:#FFF57D;stroke-width:6.828;stroke-opacity:0.5;}
+                    	.st15{fill:none;stroke:#56ADAE;stroke-width:75.1075;stroke-opacity:0.5;}
+                    	.st16{fill:none;stroke:#FFF57D;stroke-width:34.1398;stroke-opacity:0.5;}
+                    	.st17{fill:none;stroke:#FDBE70;stroke-width:20.4839;stroke-opacity:0.5;}
+                    	.st18{fill:none;stroke:#5E4FA2;stroke-width:40.9677;stroke-opacity:0.5;}
+                    	.st19{fill:none;stroke:#5E4FA2;stroke-width:13.6559;stroke-opacity:0.5;}
+                    	.st20{fill:none;stroke:#FFF57D;stroke-width:61.4516;stroke-opacity:0.5;}
+                    	.st21{fill:none;stroke:#56ADAE;stroke-width:27.3118;stroke-opacity:0.5;}
+                    	.st22{fill:none;stroke:#56ADAE;stroke-width:6.828;stroke-opacity:0.5;}
+                    	.st23{fill:none;stroke:#FFF57D;stroke-width:13.6559;stroke-opacity:0.5;}
+                    	.st24{fill:none;stroke:#BEE5A0;stroke-width:6.828;stroke-opacity:0.5;}
+                    	.st25{fill:none;stroke:#FDBE70;stroke-width:6.828;stroke-opacity:0.5;}
+                    	.st26{font-family:'Arial-BlackMT';}
+                    	.st27{font-size:10px;}
+                    	.st28{font-size:10px;}
+                    	.st29{font-family:'Arial-BlackMT';}
+                    	.st30{font-size:12px;}
+                    </style>
+                    <g id="visualization" transform="translate(10,10)">
+                    	<g>
+                    		<rect x="849" y="75.1" width="5" height="13.7"/>
+                    		<rect x="849" y="93.8" width="5" height="13.7"/>
+                    		<rect x="849" y="112.4" width="5" height="13.7"/>
+                    		<rect x="849" y="131.1" width="5" height="27.3"/>
+                    		<rect x="849" y="163.4" width="5" height="34.1"/>
+                    		<rect x="436.5" y="87.6" width="5" height="41"/>
+                    		<rect x="436.5" y="133.6" width="5" height="41"/>
+                    		<rect x="849" y="202.5" width="5" height="41"/>
+                    		<rect x="849" y="248.5" width="5" height="47.8"/>
+                    		<rect x="24" y="95.1" width="5" height="136.6"/>
+                    		<rect x="849" y="301.3" width="5" height="136.6"/>
+                    		<rect x="849" y="442.9" width="5" height="136.6"/>
+                    		<rect x="436.5" y="179.5" width="5" height="143.4"/>
+                    		<rect x="436.5" y="327.9" width="5" height="170.7"/>
+                    		<rect x="849" y="584.4" width="5" height="170.7"/>
+                    		<rect x="436.5" y="503.6" width="5" height="239"/>
+                    		<rect x="24" y="236.7" width="5" height="498.4"/>
+                    	</g>
+                    	<g>
+                    		<g>
+                    			<path class="st0" d="M29,257.2c203.8,0,203.8-149.1,407.5-149.1"/>
+                    		</g>
+                    		<g>
+                    			<path class="st1" d="M29,646.3c203.8,0,203.8,7.5,407.5,7.5"/>
+                    		</g>
+                    		<g>
+                    			<path class="st2" d="M29,200.9c203.8,0,203.8,333.4,407.5,333.4"/>
+                    		</g>
+                    		<g>
+                    			<path class="st3" d="M29,383.5c203.8,0,203.8-125.4,407.5-125.4"/>
+                    		</g>
+                    		<g>
+                    			<path class="st4" d="M29,101.9c203.8,0,203.8,84.4,407.5,84.4"/>
+                    		</g>
+                    		<g>
+                    			<path class="st5" d="M29,503c203.8,0,203.8-59,407.5-59"/>
+                    		</g>
+                    		<g>
+                    			<path class="st2" d="M29,139.5c203.8,0,203.8,219.2,407.5,219.2"/>
+                    		</g>
+                    		<g>
+                    			<path class="st0" d="M29,298.1c203.8,0,203.8-144.1,407.5-144.1"/>
+                    		</g>
+                    		<g>
+                    			<path class="st6" d="M441.5,108.1c203.8,0,203.8,200,407.5,200"/>
+                    		</g>
+                    		<g>
+                    			<path class="st7" d="M441.5,609.5c203.8,0,203.8-209.2,407.5-209.2"/>
+                    		</g>
+                    		<g>
+                    			<path class="st8" d="M441.5,213.7c203.8,0,203.8,108.1,407.5,108.1"/>
+                    		</g>
+                    		<g>
+                    			<path class="st9" d="M441.5,406.5c203.8,0,203.8-60.8,407.5-60.8"/>
+                    		</g>
+                    		<g>
+                    			<path class="st10" d="M441.5,379.1c203.8,0,203.8-93.1,407.5-93.1"/>
+                    		</g>
+                    		<g>
+                    			<path class="st11" d="M441.5,147.2c203.8,0,203.8,108.1,407.5,108.1"/>
+                    		</g>
+                    		<g>
+                    			<path class="st8" d="M441.5,200c203.8,0,203.8,69,407.5,69"/>
+                    		</g>
+                    		<g>
+                    			<path class="st12" d="M441.5,530.9c203.8,0,203.8-386.2,407.5-386.2"/>
+                    		</g>
+                    		<g>
+                    			<path class="st13" d="M441.5,331.3c203.8,0,203.8-252.8,407.5-252.8"/>
+                    		</g>
+                    		<g>
+                    			<path class="st14" d="M441.5,507C645.2,507,645.2,85.4,849,85.4"/>
+                    		</g>
+                    		<g>
+                    			<path class="st15" d="M441.5,285.4c203.8,0,203.8,357.1,407.5,357.1"/>
+                    		</g>
+                    		<g>
+                    			<path class="st16" d="M441.5,725.5c203.8,0,203.8,12.5,407.5,12.5"/>
+                    		</g>
+                    		<g>
+                    			<path class="st17" d="M441.5,164.3c203.8,0,203.8,430.3,407.5,430.3"/>
+                    		</g>
+                    		<g>
+                    			<path class="st18" d="M441.5,478.1c203.8,0,203.8,222.3,407.5,222.3"/>
+                    		</g>
+                    		<g>
+                    			<path class="st19" d="M441.5,341.6c203.8,0,203.8-241,407.5-241"/>
+                    		</g>
+                    		<g>
+                    			<path class="st20" d="M441.5,677.7c203.8,0,203.8-129.1,407.5-129.1"/>
+                    		</g>
+                    		<g>
+                    			<path class="st9" d="M441.5,440.6c203.8,0,203.8,60.3,407.5,60.3"/>
+                    		</g>
+                    		<g>
+                    			<path class="st21" d="M441.5,234.2c203.8,0,203.8,236,407.5,236"/>
+                    		</g>
+                    		<g>
+                    			<path class="st6" d="M441.5,121.7c203.8,0,203.8,327.9,407.5,327.9"/>
+                    		</g>
+                    		<g>
+                    			<path class="st14" d="M441.5,513.9c203.8,0,203.8-391.2,407.5-391.2"/>
+                    		</g>
+                    		<g>
+                    			<path class="st22" d="M441.5,183c203.8,0,203.8-67.1,407.5-67.1"/>
+                    		</g>
+                    		<g>
+                    			<path class="st23" d="M441.5,551.4c203.8,0,203.8-360.7,407.5-360.7"/>
+                    		</g>
+                    		<g>
+                    			<path class="st24" d="M441.5,91c203.8,0,203.8,75.8,407.5,75.8"/>
+                    		</g>
+                    		<g>
+                    			<path class="st19" d="M441.5,355.2C645.2,355.2,645.2,177,849,177"/>
+                    		</g>
+                    		<g>
+                    			<path class="st24" d="M441.5,97.9c203.8,0,203.8,108.1,407.5,108.1"/>
+                    		</g>
+                    		<g>
+                    			<path class="st23" d="M441.5,565.1c203.8,0,203.8-328.4,407.5-328.4"/>
+                    		</g>
+                    		<g>
+                    			<path class="st25" d="M441.5,137c203.8,0,203.8,75.8,407.5,75.8"/>
+                    		</g>
+                    		<g>
+                    			<path class="st22" d="M441.5,189.8c203.8,0,203.8,29.8,407.5,29.8"/>
+                    		</g>
+                    		<g>
+                    			<path class="st13" d="M441.5,365.5c203.8,0,203.8-139.1,407.5-139.1"/>
+                    		</g>
+                    	</g>
+                    	<text transform="matrix(1 0 0 1 731.1328 76.4189)" class="st26 st27">ANTI-ISLAMIC(MUSLIM)</text>
+                    	<text transform="matrix(1 0 0 1 839.8584 85.3519)" class="st26 st28">2</text>
+                    	<text transform="matrix(1 0 0 1 713.3447 95.0748)" class="st26 st27">ANTI-LGBT(MIXED GROUP)</text>
+                    	<g>
+                    		<text transform="matrix(1 0 0 1 839.4385 104.0748)" class="st29 st28">2</text>
+                    	</g>
+                    	<text transform="matrix(1 0 0 1 741.1133 113.7308)" class="st26 st27">ANTI-TRANSGENDER</text>
+                    	<g>
+                    		<text transform="matrix(1 0 0 1 839.4385 122.7308)" class="st29 st28">2</text>
+                    	</g>
+                    	<text transform="matrix(1 0 0 1 777.2314 139.2147)" class="st26 st27">ANTI-FEMALE</text>
+                    	<g>
+                    		<text transform="matrix(1 0 0 1 839.4385 148.2147)" class="st29 st28">4</text>
+                    	</g>
+                    	<text transform="matrix(1 0 0 1 786.123 174.9404)" class="st26 st27">ANTI-WHITE</text>
+                    	<g>
+                    		<text transform="matrix(1 0 0 1 839.4385 183.9404)" class="st29 st28">5</text>
+                    	</g>
+                    	<text transform="matrix(1 0 0 1 445.5 102.5748)" class="st26 st27">BLACK HISPANIC</text>
+                    	<text transform="matrix(1 0 0 1 445.5 114.5748)" class="st29 st27">6</text>
+                    	<text transform="matrix(1 0 0 1 445.5 148.5426)" class="st26 st27">ASIAN / PACIFIC ISLANDER</text>
+                    	<text transform="matrix(1 0 0 1 445.5 160.5426)" class="st29 st27">6</text>
+                    	<text transform="matrix(1 0 0 1 810 217.4942)" class="st26 st27">OTHER</text>
+                    	<g>
+                    		<text transform="matrix(1 0 0 1 839.4385 226.4942)" class="st29 st28">6</text>
+                    	</g>
+                    	<text transform="matrix(1 0 0 1 783.3447 266.8759)" class="st26 st27">ANTI-BLACK</text>
+                    	<g>
+                    		<text transform="matrix(1 0 0 1 839.4385 275.8759)" class="st29 st28">7</text>
+                    	</g>
+                    	<text transform="matrix(1 0 0 1 33 157.8705)" class="st26 st27">FEMALE</text>
+                    	<text transform="matrix(1 0 0 1 33 169.8705)" class="st29 st27">20</text>
+                    	<text transform="matrix(1 0 0 1 787.2266 364.0533)" class="st26 st27">ANTI-ASIAN</text>
+                    	<g>
+                    		<text transform="matrix(1 0 0 1 836.877 376.0533)" class="st29 st28">20</text>
+                    	</g>
+                    	<text transform="matrix(1 0 0 1 688.1494 505.6125)" class="st26 st27">ANTI-MALE HOMOSEXUAL(GAY)</text>
+                    	<g>
+                    		<text transform="matrix(1 0 0 1 836.877 517.6125)" class="st29 st28">20</text>
+                    	</g>
+                    	<text transform="matrix(1 0 0 1 445.5 245.72)" class="st26 st27">WHITE</text>
+                    	<text transform="matrix(1 0 0 1 445.5 257.72)" class="st29 st27">21</text>
+                    	<text transform="matrix(1 0 0 1 445.5 407.7631)" class="st26 st27">WHITE HISPANIC</text>
+                    	<text transform="matrix(1 0 0 1 445.5 419.7631)" class="st29 st27">25</text>
+                    	<text transform="matrix(1 0 0 1 780 664.2415)" class="st26 st27">ANTI-JEWISH</text>
+                    	<g>
+                    		<text transform="matrix(1 0 0 1 836.877 676.2415)" class="st29 st28">25</text>
+                    	</g>
+                    	<text transform="matrix(1 0 0 1 445.5 617.6017)" class="st26 st27">BLACK</text>
+                    	<text transform="matrix(1 0 0 1 445.5 629.6017)" class="st29 st27">35</text>
+                    	<text transform="matrix(1 0 0 1 33 480.3705)" class="st26 st27">MALE</text>
+                    	<text transform="matrix(1 0 0 1 33 492.3705)" class="st29 st27">73</text>
+                    	<text transform="matrix(1 0 0 1 787.2271 54.0647)" class="st26 st30">Bias-Motivation</text>
+                    	<text transform="matrix(1 0 0 1 420.3511 54.0646)" class="st26 st30">Race</text>
+                    	<text transform="matrix(1 0 0 1 6.0698 54.0646)" class="st26 st30">Gender</text>
+                    </g>
+                    </svg>
+                    <!--…y llega hasta acá-->
+                    <p class="p-5">
+                        Aquí se puede observar el género, etnia o raza, y motivo de cada perpetrador del crimen de odio registrado por la Policía de New York, evidenciando que en su mayoría son de género masculino, de raza negra y cuya motivación suele ser el anti-judaísmo.
+                    </p>
+                </div>
+                <div class="col-sm-11 col-md-10 col-lg-9 col-xl-8 col-xxl-7 mx-auto">
+                    <img src="viz2.svg" class="w-100">
+                    <p class="p-5">
+                        Versión originalmente obtenida de <a href="https://app.rawgraphs.io/" target="_blank" target="_blank" rel="noreferrer noopener">RAWGraphs 2.0 beta</a>. Se utilizan los datos de NYC Open Data. El gráfico utilizado es un diagrama aluvial (alluvial diagram), el
+                        cual consiste en una manera de presentar correlaciones entre dimensiones a través de flujos cuyo ancho determinan cierta proporción, para así conectar visualmente cada categoría a través de elementos que comparten estas.
                     </p>
                 </div>
             </div>
-        </div>
-    </div>
-</footer>
-
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-
-        <script>
-            window.addEventListener("load", elAjuste);
-            window.addEventListener("resize", elAjuste);
-            var titular = document.getElementById("titular");
-            var satelital = document.getElementById("satelital");
-            function elAjuste() {
-                var h = titular.offsetHeight;
-                satelital.setAttribute("style", "margin-top:-"+h+"px;");
-            }
-        </script>
-      
+        </main>
+        <footer class="container-fluid bg-dark text-white-50">
+            <div class="row py-3">
+                <div class="col-12">
+                    <p class="d-flex justify-content-between small p-1 m-0">
+                        <!--reemplaza el # que sigue con la URL de tu cuenta en GitHub-->
+                        <a href="https://github.com/helena-martinez">Helena Martínez</a>
+                        <a href="https://github.com/profesorfaco/dno075-2021-1/">Infografía Digital v2</a>
+                        <a href="https://github.com/profesorfaco/dno075-2021-1/tree/main/clase-05" class="d-none d-lg-inline">Lunes 12 de abril, 2021</a>
+                    </p>
+                </div>
+            </div>
+        </footer>
     </body>
 </html>
