@@ -1,3 +1,3 @@
 # infograf-aperrito
 TIDE
-https://circularpet.github.io/cuidatuperro/
+https://jmgandalf.github.io/cuidatuperro/
